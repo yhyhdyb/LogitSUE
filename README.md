@@ -1,2 +1,0 @@
-# LogitSUE
-Urban Countermeasure Simulation
