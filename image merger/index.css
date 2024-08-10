@@ -1,0 +1,415 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+
+input {
+    background: none;
+    outline: none;
+    border: 0px;
+    padding: 0;
+    margin: 0;
+
+}
+
+select {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding-right: 14px;
+}
+
+ol,
+ul {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+li {
+
+    list-style: none
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+i {
+    font-style: normal;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .main {
+    position: relative;
+    width: 65%;
+}
+
+.container .main .title_ p {
+    text-align: center;
+    color: black;
+}
+
+.container .main .title_ p:nth-of-type(1) {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container .main .title_ p:nth-of-type(2) {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.container .main .area {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #fbfbfb;
+    border-radius: 8px 8px 0 0;
+    border: 2px solid lightgray;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.container .main .area .custom_file_upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    cursor: pointer;
+    background-color: #ce1414;
+    border: 2px solid #ce1414;
+    border-radius: 8px;
+}
+
+.container .main .area .loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    border-bottom: 2px solid lightgray;
+    border-radius: 8px;
+    display: none;
+
+    text-align: center;
+    line-height: 300px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.container .main .area .custom_file_upload .input_area {
+    margin: auto;
+    width: 98%;
+    margin-top: 8px;
+    height: 280px;
+    border: 2px dashed white;
+    border-radius: 8px;
+}
+
+.container .main .area .custom_file_upload .input_area button {
+    margin: 110px auto 0 auto;
+    display: block;
+    background-color: white;
+    width: 240px;
+    height: 50px;
+    border-radius: 2px;
+
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+
+    transition: all 500ms ease-in-out;
+}
+
+.container .main .area .custom_file_upload .input_area button:hover {
+    font-size: 20px;
+    background-color: lightgray;
+}
+
+
+.container .main .area .img_ {
+    margin: 40px 0 0 0;
+    height: 200px;
+    display: none;
+}
+
+.container .main .area .img_ .img_div {
+    background-color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.container .main .area .img_ .img_div img {
+    margin: auto;
+}
+
+.container .main .area .img_ .img_name {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+}
+
+
+.container .main .operation {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .main .operation .add_more {
+    margin: 0 0 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .main .operation .add_more img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.container .main .operation .select_direction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container .main .operation .select_direction label {
+    display: block;
+    margin: 0 10px 0 0;
+}
+
+.container .main .operation .select_direction select {
+    display: block;
+    width: 110px;
+    height: 28px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 0 10px 0 10px;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container .main .operation .input_space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .main .operation .input_space label {
+    display: block;
+    margin: 0 10px 0 0;
+}
+
+.container .main .operation .input_space input {
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    width: 50px;
+    height: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.container .main .operation .merge {
+    cursor: pointer;
+    margin: 0 15px 0 0;
+    display: block;
+    background-color: #ce1414;
+    width: 180px;
+    height: 40px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 500ms ease-in-out;
+}
+
+.container .main .operation .merge p {
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    margin: 0 5px 0 0;
+    transition: all 500ms ease-in-out;
+}
+
+.container .main .operation .merge img {
+    width: 30px;
+    height: 25px;
+    transition: all 500ms ease-in-out;
+}
+
+.container .main .operation .merge:hover {
+    background-color: #ce1414;
+}
+
+.container .main .operation .merge:hover p {
+    font-size: 18px;
+}
+
+.container .main .operation .merge:hover img {
+    width: 35px;
+    height: 30px;
+}
+
+.container .main .show_area {
+    width: 100%;
+    display: none;
+    grid-template-columns: 2fr 1fr;
+    border: 2px solid lightgray;
+}
+
+.container .main .show_area .left {
+    height: 500px;
+    background-color: #fbfbfb;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.container .main .show_area .left img {
+    margin: auto;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.container .main .show_area .right {
+    margin-left: 10px;
+    border-left: 2px solid lightgray;
+}
+
+.container .main .show_area .right button {
+    cursor: pointer;
+    margin: 20px auto 0 auto;
+    display: block;
+    background-color: #ce1414;
+    width: 180px;
+    height: 40px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 500ms ease-in-out;
+}
+
+.container .main .show_area .right button img {
+    width: 30px;
+    height: 30px;
+    transition: all 500ms ease-in-out;
+}
+
+.container .main .show_area .right button p {
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    margin: 0 5px 0 0;
+    transition: all 500ms ease-in-out;
+}
+
+.container .main .show_area .right button:hover{
+    background-color: cornflowerblue;
+}
+
+.container .main .show_area .right button:hover p{
+    font-size:18px;
+}
+
+.container .main .show_area .right button:hover img{
+    width: 35px;
+    height: 35px;
+}
+
+
+.container .main .show_area .continue {
+    display: none;
+    cursor: pointer;
+    background-color: #ce1414;
+    width: 120px;
+    height: 34px;
+    border-radius: 4px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container .main .show_area .continue:hover{
+    font-size:18px;
+}

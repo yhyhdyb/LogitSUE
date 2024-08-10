@@ -1,0 +1,8 @@
+.el-checkbox__label {
+  color: #4f709c !important;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: #4f709c;
+  border-color: #4f709c;
+}
